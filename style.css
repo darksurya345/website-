@@ -1,27 +1,29 @@
-/* Basic Reset */
+/* Styling for SURYA-X */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #0b0e14; /* Dark Background */
+    background-color: #0b0e14;
     color: white;
     line-height: 1.6;
 }
 
-/* Navbar */
+/* Navbar & Dropdown */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
-    background: rgba(11, 14, 20, 0.8);
+    background: rgba(11, 14, 20, 0.95);
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 1px solid #1f2937;
 }
 
 .logo {
@@ -34,7 +36,8 @@ body {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    align-items: center;
+    gap: 25px;
 }
 
 .nav-links a {
@@ -43,17 +46,26 @@ body {
     transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: #00d2ff;
+.dropdown { position: relative; }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #161b22;
+    min-width: 180px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    margin-top: 10px;
 }
-
-.btn-github {
-    background: #333;
-    padding: 8px 15px;
-    border-radius: 5px;
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    font-size: 14px;
 }
+.dropdown-content a:hover { background: #1f2937; color: #00d2ff; }
+.dropdown:hover .dropdown-content { display: block; }
 
-/* Hero Section */
+/* Hero */
 .hero {
     height: 80vh;
     display: flex;
@@ -63,33 +75,20 @@ body {
     background: radial-gradient(circle at center, #1a2a3a 0%, #0b0e14 100%);
 }
 
-.badge {
-    background: rgba(0, 210, 255, 0.1);
-    color: #00d2ff;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 14px;
-    border: 1px solid #00d2ff;
-}
-
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin: 20px 0;
     background: linear-gradient(to right, #fff, #00d2ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.hero p {
-    max-width: 600px;
-    margin: 0 auto 30px;
-    color: #a0a0a0;
-}
-
-.hero-btns {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+.badge {
+    background: rgba(0, 210, 255, 0.1);
+    color: #00d2ff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border: 1px solid #00d2ff;
 }
 
 .btn-primary {
@@ -107,9 +106,10 @@ body {
     padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
+    margin-left: 10px;
 }
 
-/* Stats */
+/* Hub & Stats */
 .stats {
     display: flex;
     justify-content: center;
@@ -118,17 +118,9 @@ body {
     background: #111;
 }
 
-.stat-card h2 {
-    color: #00d2ff;
-    font-size: 2.5rem;
-}
+.stat-card h2 { color: #00d2ff; font-size: 2.5rem; }
 
-/* Hub/Cards */
-.hub {
-    padding: 80px 10%;
-    text-align: center;
-}
-
+.hub { padding: 80px 10%; text-align: center; }
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -144,16 +136,8 @@ body {
     transition: 0.3s;
 }
 
-.card:hover {
-    border-color: #00d2ff;
-    transform: translateY(-5px);
-}
-
-.card i {
-    font-size: 40px;
-    color: #00d2ff;
-    margin-bottom: 15px;
-}
+.card:hover { border-color: #00d2ff; transform: translateY(-5px); }
+.card i { font-size: 40px; color: #00d2ff; margin-bottom: 15px; }
 
 .btn-card {
     margin-top: 15px;
@@ -165,21 +149,4 @@ body {
     border-radius: 5px;
 }
 
-.btn-card:hover {
-    background: #00d2ff;
-    color: black;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 40px;
-    border-top: 1px solid #333;
-    color: #777;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .hero h1 { font-size: 2rem; }
-    .nav-links { display: none; }
-}
+footer { text-align: center; padding: 40px; border-top: 1px solid #333; color: #777; }
