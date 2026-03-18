@@ -1,152 +1,112 @@
-/* Styling for SURYA-X */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SURYA-X - Next-Gen Bot Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
 
-body {
-    background-color: #0b0e14;
-    color: white;
-    line-height: 1.6;
-}
+    <nav class="navbar">
+        <div class="logo">SURYA-X</div>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Home <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="https://t.me/DARKSURYA_345" target="_blank"><i class="fab fa-telegram"></i> Support</a>
+                    <a href="https://wa.me/917797099719" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="#privacy"><i class="fas fa-shield-alt"></i> Privacy Policy</a>
+                </div>
+            </li>
+            <li><a href="#hub">Features</a></li>
+        </ul>
+    </nav>
 
-/* Navbar & Dropdown */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 10%;
-    background: rgba(11, 14, 20, 0.95);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid #1f2937;
-}
+    <section class="hero">
+        <div class="hero-content">
+            <span class="badge">Next-Gen Bot Platform</span>
+            <h1>The Ultimate SURYA-X Experience</h1>
+            <p>Deploy powerful SURYA-X bots with advanced features and high reliability.</p>
+            <div class="hero-btns">
+                <a href="#hub" class="btn-primary">Explore Hub</a>
+            </div>
+        </div>
+    </section>
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    color: #00d2ff;
-}
+    <section id="hub" class="hub">
+        <h2>Quick Access Hub</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <i class="fas fa-code"></i>
+                <h3>Pair Code</h3>
+                <p>Generate session codes instantly.</p>
+                <button class="btn-card">Server 1</button>
+            </div>
+            <div class="card">
+                <i class="fas fa-code"></i>
+                <h3>Pair Code</h3>
+                <p>Generate session codes instantly.</p>
+                <button class="btn-card">Server 2</button>
+            </div>
+            <div class="card">
+                <i class="fas fa-code"></i>
+                <h3>Pair Code</h3>
+                <p>Generate session codes instantly.</p>
+                <button class="btn-card">Server 3</button>
+            </div>
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
+            <div class="card">
+                <i class="fas fa-qrcode"></i>
+                <h3>QR Generator</h3>
+                <p>Scan to connect instantly.</p>
+                <button class="btn-card">QR Server 1</button>
+            </div>
+            <div class="card">
+                <i class="fas fa-qrcode"></i>
+                <h3>QR Generator</h3>
+                <p>Scan to connect instantly.</p>
+                <button class="btn-card">QR Server 2</button>
+            </div>
+            <div class="card">
+                <i class="fas fa-qrcode"></i>
+                <h3>QR Generator</h3>
+                <p>Scan to connect instantly.</p>
+                <button class="btn-card">QR Server 3</button>
+            </div>
 
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-}
+            <div class="card">
+                <i class="fab fa-github"></i>
+                <h3>Source Code</h3>
+                <p>Get the latest SURYA-X repo.</p>
+                <button class="btn-card">Repo 1</button>
+            </div>
+            <div class="card">
+                <i class="fab fa-github"></i>
+                <h3>Source Code</h3>
+                <p>Get the latest SURYA-X repo.</p>
+                <button class="btn-card">Repo 2</button>
+            </div>
+            <div class="card">
+                <i class="fab fa-github"></i>
+                <h3>Source Code</h3>
+                <p>Get the latest SURYA-X repo.</p>
+                <button class="btn-card">Repo 3</button>
+            </div>
 
-.dropdown { position: relative; }
-.dropdown-content {
-    display: none;
-    position: absolute;
-    right: 0;
-    background-color: #161b22;
-    min-width: 180px;
-    border-radius: 8px;
-    border: 1px solid #30363d;
-    margin-top: 10px;
-}
-.dropdown-content a {
-    padding: 12px 16px;
-    display: block;
-    font-size: 14px;
-}
-.dropdown-content a:hover { background: #1f2937; color: #00d2ff; }
-.dropdown:hover .dropdown-content { display: block; }
+        </div>
+    </section>
 
-/* Hero */
-.hero {
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: radial-gradient(circle at center, #1a2a3a 0%, #0b0e14 100%);
-}
+    <section id="privacy" class="privacy-section" style="padding: 60px 10%; text-align: center; background: #0d1117;">
+        <h2>Privacy Policy</h2>
+        <p style="color: #a0a0a0; margin-top: 20px;">SURYA-X respects your data privacy. No session data is stored on our servers.</p>
+    </section>
 
-.hero h1 {
-    font-size: 3.5rem;
-    margin: 20px 0;
-    background: linear-gradient(to right, #fff, #00d2ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+    <footer>
+        <p>&copy; 2026 SURYA-X. Made with <i class="fas fa-heart" style="color: #00d2ff;"></i> by Surya.</p>
+    </footer>
 
-.badge {
-    background: rgba(0, 210, 255, 0.1);
-    color: #00d2ff;
-    padding: 5px 15px;
-    border-radius: 20px;
-    border: 1px solid #00d2ff;
-}
-
-.btn-primary {
-    background: #00d2ff;
-    color: black;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.btn-secondary {
-    border: 1px solid #fff;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-left: 10px;
-}
-
-/* Hub & Stats */
-.stats {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    padding: 50px 0;
-    background: #111;
-}
-
-.stat-card h2 { color: #00d2ff; font-size: 2.5rem; }
-
-.hub { padding: 80px 10%; text-align: center; }
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.card {
-    background: #161b22;
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid #30363d;
-    transition: 0.3s;
-}
-
-.card:hover { border-color: #00d2ff; transform: translateY(-5px); }
-.card i { font-size: 40px; color: #00d2ff; margin-bottom: 15px; }
-
-.btn-card {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: transparent;
-    border: 1px solid #00d2ff;
-    color: #00d2ff;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-footer { text-align: center; padding: 40px; border-top: 1px solid #333; color: #777; }
+</body>
+</html>
